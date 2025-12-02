@@ -83,7 +83,10 @@ export function ActivityCard({
 
   return (
     <div
-      ref={(node) => drag(drop(node))}
+      ref={(node) => {
+        drag(node);
+        drop(node);
+      }}
       className={`group bg-white border rounded-lg p-3 cursor-move transition-all ${
         isDragging ? "opacity-50 scale-95" : "opacity-100"
       } ${

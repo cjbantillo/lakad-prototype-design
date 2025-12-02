@@ -50,7 +50,9 @@ export function DayColumn({
 
   return (
     <div
-      ref={drop}
+      ref={(node) => {
+        drop(node);
+      }}
       className={`bg-white rounded-xl border-2 transition-all ${
         isOver ? "border-blue-400 bg-blue-50/50" : "border-gray-200"
       }`}
