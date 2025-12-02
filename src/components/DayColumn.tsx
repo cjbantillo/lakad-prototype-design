@@ -53,8 +53,8 @@ export function DayColumn({
       ref={(node) => {
         drop(node);
       }}
-      className={`bg-white rounded-xl border-2 transition-all ${
-        isOver ? "border-blue-400 bg-blue-50/50" : "border-gray-200"
+      className={`bg-white rounded-xl border transition-all shadow-sm ${
+        isOver ? "border-teal-400 bg-teal-50/30" : "border-gray-200"
       }`}
     >
       {/* Day Header */}
@@ -107,9 +107,9 @@ export function DayColumn({
       <div className="border-t border-gray-200 p-4">
         <button
           onClick={() => onAddActivity(day.dayNumber)}
-          className="w-full flex items-center justify-center gap-2 px-4 py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-600 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-50 transition-all font-semibold"
+          className="w-full flex items-center justify-center gap-2 px-4 py-2.5 border-2 border-dashed border-gray-300 rounded-lg text-gray-600 hover:border-teal-400 hover:text-teal-600 hover:bg-teal-50 transition-all font-medium text-sm"
         >
-          <Plus className="w-5 h-5 stroke-[2.5]" />
+          <Plus className="w-4 h-4 stroke-[2.5]" />
           <span>Add Activity</span>
         </button>
       </div>

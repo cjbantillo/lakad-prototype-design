@@ -81,17 +81,19 @@ export function TripManagement({ trips, onUpdateTrip }: TripManagementProps) {
                 <ArrowLeft className="w-5 h-5 text-gray-600" />
               </button>
               <div className="flex-1">
-                <h1 className="text-3xl font-bold text-gray-900">
+                <h1 className="text-2xl font-bold text-gray-900 tracking-tight">
                   {trip.name}
                 </h1>
-                <div className="flex flex-wrap items-center gap-4 text-gray-600 mt-2">
-                  <div className="flex items-center gap-2">
-                    <MapPin className="w-5 h-5" />
-                    <span className="font-medium">{trip.destination}</span>
+                <div className="flex flex-wrap items-center gap-3 text-gray-600 mt-2">
+                  <div className="flex items-center gap-1.5">
+                    <MapPin className="w-4 h-4 text-teal-600" />
+                    <span className="text-sm font-medium">
+                      {trip.destination}
+                    </span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-5 h-5" />
-                    <span className="font-medium">
+                  <div className="flex items-center gap-1.5">
+                    <Calendar className="w-4 h-4 text-gray-400" />
+                    <span className="text-sm">
                       {formatDate(trip.startDate)} - {formatDate(trip.endDate)}
                     </span>
                   </div>
@@ -103,24 +105,24 @@ export function TripManagement({ trips, onUpdateTrip }: TripManagementProps) {
             <div className="flex gap-2 bg-gray-100 rounded-lg p-1">
               <button
                 onClick={() => setView("itinerary")}
-                className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg transition-all font-semibold ${
+                className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-md transition-all font-medium text-sm ${
                   view === "itinerary"
-                    ? "bg-white text-blue-600 shadow-sm"
+                    ? "bg-white text-teal-600 shadow-sm"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
-                <List className="w-5 h-5 stroke-[2.5]" />
+                <List className="w-4 h-4" />
                 <span>Itinerary</span>
               </button>
               <button
                 onClick={() => setView("map")}
-                className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg transition-all font-semibold ${
+                className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-md transition-all font-medium text-sm ${
                   view === "map"
-                    ? "bg-white text-blue-600 shadow-sm"
+                    ? "bg-white text-teal-600 shadow-sm"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
-                <MapIcon className="w-5 h-5 stroke-[2.5]" />
+                <MapIcon className="w-4 h-4" />
                 <span>Map View</span>
               </button>
             </div>

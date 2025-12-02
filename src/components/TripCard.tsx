@@ -15,13 +15,13 @@ export function TripCard({ trip, onClick }: TripCardProps) {
   const getStatusColor = () => {
     switch (trip.status) {
       case "current":
-        return "bg-green-100 text-green-700 border-green-200";
+        return "bg-emerald-500 text-white";
       case "upcoming":
-        return "bg-blue-100 text-blue-700 border-blue-200";
+        return "bg-cyan-500 text-white";
       case "past":
-        return "bg-gray-100 text-gray-700 border-gray-200";
+        return "bg-gray-500 text-white";
       default:
-        return "bg-gray-100 text-gray-700 border-gray-200";
+        return "bg-gray-500 text-white";
     }
   };
 

@@ -91,7 +91,7 @@ export function ActivityCard({
         isDragging ? "opacity-50 scale-95" : "opacity-100"
       } ${
         isOver
-          ? "border-blue-400 shadow-md"
+          ? "border-teal-400 shadow-md bg-teal-50/30"
           : "border-gray-200 hover:border-gray-300 hover:shadow-sm"
       }`}
     >

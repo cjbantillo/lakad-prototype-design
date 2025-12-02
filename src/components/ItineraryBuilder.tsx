@@ -104,11 +104,11 @@ export function ItineraryBuilder({
       )}
 
       {/* Instruction Card */}
-      <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6 flex items-start gap-3">
-        <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+      <div className="bg-cyan-50 border border-cyan-200 rounded-lg p-3.5 mb-6 flex items-start gap-3">
+        <div className="w-5 h-5 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
           <span className="text-white text-xs font-bold">i</span>
         </div>
-        <p className="text-sm text-blue-800">
+        <p className="text-sm text-cyan-900">
           <strong className="font-semibold">Tip:</strong> Drag and drop
           activities between days to rearrange your itinerary
         </p>

@@ -57,24 +57,28 @@ export function Dashboard({
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 bg-gray-50">
         {/* Create New Trip CTA */}
-        <div className="mb-8">
+        <div className="mb-6">
           <button
             onClick={() => setShowCreateModal(true)}
-            className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl px-6 py-4 flex items-center justify-center gap-2 hover:from-blue-600 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl font-semibold"
+            className="w-full sm:w-auto bg-gradient-to-r from-teal-500 to-cyan-600 text-white rounded-lg px-8 py-3.5 flex items-center justify-center gap-2 hover:from-teal-600 hover:to-cyan-700 transition-all shadow-md hover:shadow-lg font-semibold text-base"
           >
             <Plus className="w-5 h-5 stroke-[2.5]" />
-            <span className="text-base">Create New Trip</span>
+            <span>Create New Trip</span>
           </button>
         </div>
 
         {/* Current Trips */}
         {currentTrips.length > 0 && (
-          <section className="mb-12">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <h2 className="text-2xl font-bold text-gray-900">Current Trip</h2>
+          <section className="mb-10">
+            <div className="flex items-center gap-2 mb-5">
+              <div className="flex items-center gap-2 px-3 py-1 bg-emerald-100 rounded-full">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                <span className="text-xs font-semibold text-emerald-700 uppercase tracking-wide">
+                  In Progress
+                </span>
+              </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {currentTrips.map((trip) => (
@@ -111,10 +115,13 @@ export function Dashboard({
 
         {/* Past Trips */}
         {pastTrips.length > 0 && (
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Past Trips
-            </h2>
+          <section className="mb-10">
+            <div className="flex items-center gap-3 mb-5">
+              <h2 className="text-xl font-bold text-gray-900">Past Trips</h2>
+              <span className="px-2 py-0.5 bg-gray-100 rounded-full text-xs font-medium text-gray-600">
+                {pastTrips.length}
+              </span>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {pastTrips.map((trip) => (
                 <TripCard
